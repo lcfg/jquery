@@ -67,7 +67,11 @@ var rootjQuery,
 
 				// HANDLE: $(#id)
 				} else {
+					if ( match[2] !== "" ) {
 					elem = document.getElementById( match[2] );
+					} else {
+						match[2] = "";
+					}
 
 					// Support: Blackberry 4.6
 					// gEBID returns nodes no longer in the document (#6963)
